@@ -5,38 +5,28 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>webports dot com - official webports website</title>
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap');
 
-.montsAnimated
+body
 {
-  font-family: "Montserrat", sans-serif;
+  background-image: linear-gradient(#001a4d, #9bd8ff);
+  background-attachment: fixed;
+  margin: 0;
   text-align: center;
-  display: inline-block;
-  animation: slideIn 1s ease-out forwards;
+  font-family: "Inter", sans-serif;
   color: white;
 }
 
-.monts
+.heading
 {
-  font-family: "Montserrat", sans-serif;
   display: inline-block;
-  animation: doohickey 1s ease-out forwards;
-  text-align: center;
-  color: white;
+  animation: fadeRise 0.7s ease-out both;
 }
 
-@keyframes doohickey
+.subText
 {
-  0% { font-weight: 1000; }
-  50% { font-weight: 500; }
-  100% { font-weight: 300; }
-}
-
-@keyframes slideIn
-{
-  0% { transform: translateY(-50px); font-weight: 1000; opacity: 0; }
-  50% { transform: translateY(-10px); font-weight: 500; opacity: 0.5; }
-  100% { transform: translateX(0); font-weight: 400; opacity: 1; }
+  display: block;
+  animation: fadeIn 0.9s 0.25s ease-out both;
 }
 
 .buttonsDiv
@@ -50,27 +40,31 @@
 
 .buttonsDoohick
 {
-  font-family: Montserrat;
+  font-family: "Inter", sans-serif;
 }
 
 .buttonsDoohick:hover
 {
-  transition: transform 0.3s cubic-bezier(0, 0, 0.6, 40);
-  transform: translateY(-0.1px);
+  transition: transform 0.3s ease;
+  transform: translateY(-1px);
 }
 
-body
+@keyframes fadeRise
 {
-  background-image: linear-gradient(#001a4d, #9bd8ff);
-  background-attachment: fixed;
-  margin: 0;
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: none; }
+}
+
+@keyframes fadeIn
+{
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 </style>
 </head>
 <body>
-<h1 class="montsAnimated" style="text-align: center;">webports dot com</h1>
-<p class="monts">official website yo</p>
-<p class="monts">reminder that this is still under construction</p>
+<h1 class="heading">webports dot com</h1>
+<small class="subText">web ports</small>
 <div class="buttonsDiv">
   <button class="buttonsDoohick" onclick="window.location.href='ports.html'">all of my public web ports</button>
 </div>

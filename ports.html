@@ -5,38 +5,28 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>webports dot com - my web ports</title>
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap');
 
-.montsAnimated
+body
 {
-  font-family: "Montserrat", sans-serif;
+  background-image: linear-gradient(#001a4d, #9bd8ff);
+  background-attachment: fixed;
+  margin: 0;
   text-align: center;
-  display: inline-block;
-  animation: slideIn 1s ease-out forwards;
+  font-family: "Inter", sans-serif;
   color: white;
 }
 
-.monts
+.heading
 {
-  font-family: "Montserrat", sans-serif;
   display: inline-block;
-  animation: doohickey 1s ease-out forwards;
-  text-align: center;
-  color: white;
+  animation: fadeRise 0.7s ease-out both;
 }
 
-@keyframes doohickey
+.subText
 {
-  0% { font-weight: 1000; }
-  50% { font-weight: 500; }
-  100% { font-weight: 300; }
-}
-
-@keyframes slideIn
-{
-  0% { transform: translateY(-50px); font-weight: 1000; opacity: 0; }
-  50% { transform: translateY(-10px); font-weight: 500; opacity: 0.5; }
-  100% { transform: translateX(0); font-weight: 400; opacity: 1; }
+  display: block;
+  animation: fadeIn 0.9s 0.25s ease-out both;
 }
 
 .buttonsDiv
@@ -44,50 +34,37 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 12px;
+  gap: 8px;
   flex-wrap: wrap;
-  margin-bottom: 12px;
 }
 
 .buttonsDoohick
 {
-  font-family: Montserrat;
+  font-family: "Inter", sans-serif;
 }
 
 .buttonsDoohick:hover
 {
-  transition: transform 0.3s cubic-bezier(0, 0, 0.6, 40);
-  transform: translateY(-0.1px);
+  transition: transform 0.3s ease;
+  transform: translateY(-1px);
 }
 
-.portThumb
+@keyframes fadeRise
 {
-  font-family: Montserrat;
-  text-align: center;
-  color: white;
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: none; }
 }
 
-body
+@keyframes fadeIn
 {
-  background-image: linear-gradient(#001a4d, #9bd8ff);
-  background-attachment: fixed;
-  margin: 0;
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 </style>
 </head>
 <body>
-<h1 class="montsAnimated" style="text-align: center;">my web ports</h1>
-<p class="monts">replace these placeholders with your own ports, thumbnails, and links</p>
-<div class="buttonsDiv">
-  <div class="portThumb"><img src="thumbs/port-01.svg" alt="" width="160" height="90"><br><button class="buttonsDoohick" onclick="window.location.href='#'">Port 01</button></div>
-  <div class="portThumb"><img src="thumbs/port-02.svg" alt="" width="160" height="90"><br><button class="buttonsDoohick" onclick="window.location.href='#'">Port 02</button></div>
-  <div class="portThumb"><img src="thumbs/port-03.svg" alt="" width="160" height="90"><br><button class="buttonsDoohick" onclick="window.location.href='#'">Port 03</button></div>
-</div>
-<div class="buttonsDiv">
-  <div class="portThumb"><img src="thumbs/port-04.svg" alt="" width="160" height="90"><br><button class="buttonsDoohick" onclick="window.location.href='#'">Port 04</button></div>
-  <div class="portThumb"><img src="thumbs/port-05.svg" alt="" width="160" height="90"><br><button class="buttonsDoohick" onclick="window.location.href='#'">Port 05</button></div>
-  <div class="portThumb"><img src="thumbs/port-06.svg" alt="" width="160" height="90"><br><button class="buttonsDoohick" onclick="window.location.href='#'">Port 06</button></div>
-</div>
+<h1 class="heading">my web ports</h1>
+<small class="subText">ports will appear here</small>
 <div class="buttonsDiv">
   <button class="buttonsDoohick" onclick="window.location.href='index.html'">back</button>
 </div>
