@@ -1,21 +1,95 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Web Ports - List</title>
+<title>webports dot com - my web ports</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+.montsAnimated
+{
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  display: inline-block;
+  animation: slideIn 1s ease-out forwards;
+  color: white;
+}
+
+.monts
+{
+  font-family: "Montserrat", sans-serif;
+  display: inline-block;
+  animation: doohickey 1s ease-out forwards;
+  text-align: center;
+  color: white;
+}
+
+@keyframes doohickey
+{
+  0% { font-weight: 1000; }
+  50% { font-weight: 500; }
+  100% { font-weight: 300; }
+}
+
+@keyframes slideIn
+{
+  0% { transform: translateY(-50px); font-weight: 1000; opacity: 0; }
+  50% { transform: translateY(-10px); font-weight: 500; opacity: 0.5; }
+  100% { transform: translateX(0); font-weight: 400; opacity: 1; }
+}
+
+.buttonsDiv
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+.buttonsDoohick
+{
+  font-family: Montserrat;
+}
+
+.buttonsDoohick:hover
+{
+  transition: transform 0.3s cubic-bezier(0, 0, 0.6, 40);
+  transform: translateY(-0.1px);
+}
+
+.portThumb
+{
+  font-family: Montserrat;
+  text-align: center;
+  color: white;
+}
+
+body
+{
+  background-image: linear-gradient(#001a4d, #9bd8ff);
+  background-attachment: fixed;
+  margin: 0;
+}
+</style>
 </head>
-<body style="background: linear-gradient(#001a4d, #9bd8ff); min-height: 100vh; margin: 0;">
-<h1>Web Ports</h1>
-<p>Replace these placeholder entries with your own ports, thumbnails, and links.</p>
-<ul>
-  <li><img src="thumbs/port-01.svg" alt="" width="160" height="90"> <a href="#">Port 01</a></li>
-  <li><img src="thumbs/port-02.svg" alt="" width="160" height="90"> <a href="#">Port 02</a></li>
-  <li><img src="thumbs/port-03.svg" alt="" width="160" height="90"> <a href="#">Port 03</a></li>
-  <li><img src="thumbs/port-04.svg" alt="" width="160" height="90"> <a href="#">Port 04</a></li>
-  <li><img src="thumbs/port-05.svg" alt="" width="160" height="90"> <a href="#">Port 05</a></li>
-  <li><img src="thumbs/port-06.svg" alt="" width="160" height="90"> <a href="#">Port 06</a></li>
-</ul>
-<p><a href="index.html">Back</a></p>
+<body>
+<h1 class="montsAnimated" style="text-align: center;">my web ports</h1>
+<p class="monts">replace these placeholders with your own ports, thumbnails, and links</p>
+<div class="buttonsDiv">
+  <div class="portThumb"><img src="thumbs/port-01.svg" alt="" width="160" height="90"><br><button class="buttonsDoohick" onclick="window.location.href='#'">Port 01</button></div>
+  <div class="portThumb"><img src="thumbs/port-02.svg" alt="" width="160" height="90"><br><button class="buttonsDoohick" onclick="window.location.href='#'">Port 02</button></div>
+  <div class="portThumb"><img src="thumbs/port-03.svg" alt="" width="160" height="90"><br><button class="buttonsDoohick" onclick="window.location.href='#'">Port 03</button></div>
+</div>
+<div class="buttonsDiv">
+  <div class="portThumb"><img src="thumbs/port-04.svg" alt="" width="160" height="90"><br><button class="buttonsDoohick" onclick="window.location.href='#'">Port 04</button></div>
+  <div class="portThumb"><img src="thumbs/port-05.svg" alt="" width="160" height="90"><br><button class="buttonsDoohick" onclick="window.location.href='#'">Port 05</button></div>
+  <div class="portThumb"><img src="thumbs/port-06.svg" alt="" width="160" height="90"><br><button class="buttonsDoohick" onclick="window.location.href='#'">Port 06</button></div>
+</div>
+<div class="buttonsDiv">
+  <button class="buttonsDoohick" onclick="window.location.href='index.html'">back</button>
+</div>
 </body>
 </html>

@@ -1,13 +1,78 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Web Ports</title>
+<title>webports dot com - official webports website</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+.montsAnimated
+{
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  display: inline-block;
+  animation: slideIn 1s ease-out forwards;
+  color: white;
+}
+
+.monts
+{
+  font-family: "Montserrat", sans-serif;
+  display: inline-block;
+  animation: doohickey 1s ease-out forwards;
+  text-align: center;
+  color: white;
+}
+
+@keyframes doohickey
+{
+  0% { font-weight: 1000; }
+  50% { font-weight: 500; }
+  100% { font-weight: 300; }
+}
+
+@keyframes slideIn
+{
+  0% { transform: translateY(-50px); font-weight: 1000; opacity: 0; }
+  50% { transform: translateY(-10px); font-weight: 500; opacity: 0.5; }
+  100% { transform: translateX(0); font-weight: 400; opacity: 1; }
+}
+
+.buttonsDiv
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.buttonsDoohick
+{
+  font-family: Montserrat;
+}
+
+.buttonsDoohick:hover
+{
+  transition: transform 0.3s cubic-bezier(0, 0, 0.6, 40);
+  transform: translateY(-0.1px);
+}
+
+body
+{
+  background-image: linear-gradient(#001a4d, #9bd8ff);
+  background-attachment: fixed;
+  margin: 0;
+}
+</style>
 </head>
-<body style="background: linear-gradient(#001a4d, #9bd8ff); min-height: 100vh; margin: 0;">
-<h1>Web Ports</h1>
-<p>A place for web ports, with thumbnails and links.</p>
-<button type="button" onclick="window.location.href='ports.html'">Open Web Ports</button>
+<body>
+<h1 class="montsAnimated" style="text-align: center;">webports dot com</h1>
+<p class="monts">official website yo</p>
+<p class="monts">reminder that this is still under construction</p>
+<div class="buttonsDiv">
+  <button class="buttonsDoohick" onclick="window.location.href='ports.html'">all of my public web ports</button>
+</div>
 </body>
 </html>
